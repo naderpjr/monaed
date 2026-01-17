@@ -44,22 +44,24 @@ export default function SignupPage() {
     };
 
     return (
-        <form onSubmit={handleSignup}>
-            <h1>Sign Up</h1>
+        <div className="w-full h-screen bg-linear-to-br from-gray-50 via-gray-100 to-gray-300 p-6 text-black rounded-lg flex flex-col justify-center">
+            <form className="p-10 flex flex-col justify-between" onSubmit={handleSignup}>
+                <h1 className="text-3xl">ثبت نام</h1>
 
-            <input placeholder="Name" onChange={(e) => setName(e.target.value)} />
-            <input placeholder="Age" onChange={(e) => setAge(e.target.value)} />
+                <input className="outline-none border-2 border-blue-300 px-2 py-2 m-3" placeholder="اسم" onChange={(e) => setName(e.target.value)} />
+                <input className="outline-none border-2 border-blue-300 px-2 py-2 m-3" placeholder="سن" onChange={(e) => setAge(e.target.value)} />
 
-            <select onChange={(e) => setGender(e.target.value)}>
-                <option value="">Gender</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-            </select>
+                <select className="outline-none border-2 border-blue-300 px-2 py-2 m-3" onChange={(e) => setGender(e.target.value)}>
+                    <option value="">جنسیت</option>
+                    <option value="male">مذکر</option>
+                    <option value="female">مونث</option>
+                </select>
 
-            <input placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
-            <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
+                <input className="outline-none border-2 border-blue-300 px-2 py-2 m-3" placeholder="ایمیل" onChange={(e) => setEmail(e.target.value)} />
+                <input className="outline-none border-2 border-blue-300 px-2 py-2 m-3" type="password" placeholder="پسورد" onChange={(e) => setPassword(e.target.value)} />
 
-            <button>Register</button>
-        </form>
+                <button className="bg-blue-500 text-white px-4 py-2 rounded mx-2 hover:bg-blue-600">ثبت نام</button>
+            </form>
+        </div>
     );
 }
