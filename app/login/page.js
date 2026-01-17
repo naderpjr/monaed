@@ -53,21 +53,23 @@ export default function LoginPage() {
 
 
     return (
-        <form onSubmit={handleLogin}>
-            <h1>Login</h1>
-            <input placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
-            <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
-            <button type="submit">Login</button>
+        <div className="w-full h-screen bg-linear-to-br from-gray-50 via-gray-100 to-gray-300 p-6 text-black rounded-lg flex flex-col justify-center">
+            <form lassName="w-100 p-10 flex flex-col justify-between" onSubmit={handleLogin}>
+                <h1 className="text-3xl">ورود به حساب کاربری</h1>
+                <input className="outline-none border-2 border-blue-300 px-2 py-2 m-3" placeholder="ایمیل" onChange={(e) => setEmail(e.target.value)} />
+                <input className="outline-none border-2 border-blue-300 px-2 py-2 m-3" type="password" placeholder="پسورد" onChange={(e) => setPassword(e.target.value)} />
+                <button className="bg-blue-500 text-white px-4 py-2 rounded mx-2 hover:bg-blue-600" type="submit">ورود</button>
 
 
-            <br />
-            <br />
-            <br />
-            <br />
-            <button type="button" onClick={handleGoogleLogin}>
-                Continue with Google
-            </button>
+                <br />
+                <br />
+                <br />
+                <br />
+                <button className="bg-blue-500 text-white px-4 py-2 rounded mx-2 hover:bg-blue-600" type="button" onClick={handleGoogleLogin}>
+                    Continue with Google
+                </button>
 
-        </form>
+            </form>
+        </div>
     );
 }

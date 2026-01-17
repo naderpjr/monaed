@@ -39,12 +39,35 @@ export default function Dashboard() {
     };
 
     return (
-        <div>
-            <h1>سلام {userData.name} 👋</h1>
-            <p>سن: {userData.age}</p>
-            <p>جنسیت: {userData.gender}</p>
+        <div className="max-w-sm mx-auto mt-10 p-6 bg-white rounded-xl shadow-md flex flex-col space-y-4 text-right">
 
-            <button onClick={handleLogout}>Logout</button>
+            <h1 className="text-2xl font-bold text-accent">
+                سلام {userData.name}
+            </h1>
+
+            <div className="text-gray-700 space-y-1">
+                <p>سن: <span className="font-medium">{userData.age}</span></p>
+                <p>جنسیت: <span className="font-medium">{userData.gender}</span></p>
+            </div>
+
+
+
+
+            <div>
+                <h2 className="text-xl font-semibold mb-2">دوره‌های من</h2>
+                <p className="text-gray-600">شما هنوز دوره‌ای ثبت نکرده‌اید.</p>
+            </div>
+
+
+            <button
+                onClick={handleLogout}
+                className="bg-accent hover:bg-accent-hover text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200"
+            >
+                خروج
+            </button>
+
+
         </div>
     );
+
 }
