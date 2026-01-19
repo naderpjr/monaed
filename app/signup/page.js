@@ -19,7 +19,6 @@ export default function SignupPage() {
         e.preventDefault();
 
         try {
-
             const userCred = await createUserWithEmailAndPassword(
                 auth,
                 email,
@@ -27,7 +26,6 @@ export default function SignupPage() {
             );
 
             const uid = userCred.user.uid;
-
 
             await setDoc(doc(db, "users", uid), {
                 name,
@@ -44,9 +42,9 @@ export default function SignupPage() {
     };
 
     return (
-        <div className="w-full h-screen bg-linear-to-br from-gray-50 via-gray-100 to-gray-300 p-6 text-black rounded-lg flex flex-col justify-center">
-            <form className="w-100 p-10 flex flex-col justify-between" onSubmit={handleSignup}>
-                <h1 className="text-3xl">ثبت نام</h1>
+        <div className="w-full h-screen bg-linear-to-br from-gray-50 via-gray-100 to-gray-300 p-6 text-black rounded-lg flex flex-col justify-center items-center">
+            <form className="w-full max-w-md p-10 flex flex-col justify-between" onSubmit={handleSignup}>
+                <h1 className="text-3xl mb-4">ثبت نام</h1>
 
                 <input className="outline-none border-2 border-blue-300 px-2 py-2 m-3" placeholder="اسم" onChange={(e) => setName(e.target.value)} />
                 <input className="outline-none border-2 border-blue-300 px-2 py-2 m-3" placeholder="سن" onChange={(e) => setAge(e.target.value)} />
