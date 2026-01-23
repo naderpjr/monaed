@@ -1,5 +1,6 @@
 import { Vazirmatn } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
 const vazirmatn = Vazirmatn({
   variable: "--vazirmatn-font",
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${vazirmatn.variable} antialiased`}
       >
+        <Navbar />
         {children}
       </body>
     </html>
