@@ -4,7 +4,7 @@
   --background: #f4f5f7;
   --foreground: #2a2d53;
   --accent: #4A6DFC;
-  --accent-soft: #dbeafe;
+  --accent-soft: #4a6efcdc;
 
   --border: #e5e7eb;
   --muted: #6b7280;
@@ -42,5 +42,9 @@ body {
 
   .text-blue {
     color: var(--foreground);
+  }
+
+  .accent-soft {
+    background: var(--accent-soft);
   }
 }
