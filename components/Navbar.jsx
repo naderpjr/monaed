@@ -1,20 +1,25 @@
+import { MenuIcon } from "lucide-react";
 import Link from "next/link";
 
 export default function Navbar() {
     return (
         <>
             <nav>
-                <div className=" absolute top-2.5 z-50 w-full h-16 flex justify-between items-center px-6 ">
-                    <h1 className="text-2xl font-black">مونالرن</h1>
+                <div className="fixed z-50 w-full backdrop-blur-2xl h-16 flex justify-between items-center px-6 ">
+                    <h1 className="text-xl font-bold">مونالرن</h1>
 
-                    <div className="flex">
-                        <Link href="/login" className="  text-sm backdrop-blur-3xl mx-2 px-5 py-3 rounded-2xl ">
+                    <div>
+                        <MenuIcon />
+                    </div>
+
+                    {/* <div className="absolute top-16">
+                        <Link href="/login" className="bg-accent text-white text-sm rounded-2xl px-3 py-2">
                             شروع یادگیری
                         </Link>
-                        <Link href="/login" className=" text-sm backdrop-blur-3xl mx-2 px-5 py-3 rounded-2xl">
+                        <Link href="/login" className="px-3 py-2 text-sm rounded-2xl">
                             ورود به حساب کاربری
                         </Link>
-                    </div>
+                    </div> */}
                 </div>
             </nav >
         </>
