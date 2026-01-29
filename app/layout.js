@@ -1,12 +1,36 @@
-import { Vazirmatn } from "next/font/google";
+
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import localFont from "next/font/local";
 
-const vazirmatn = Vazirmatn({
-  variable: "--vazirmatn-font",
-  subsets: ["arabic", "latin"],
-  weight: ["400", "500", "700"],
-});
+const myCustomFont = localFont({
+  src: [
+    {
+      path: "./fonts/YekanBakh-Regular.ttf",
+      weight: "400",
+      style: 'normal',
+    },
+    {
+      path: "./fonts/YekanBakh-Bold.ttf",
+      weight: "700",
+      style: 'normal',
+    },
+    {
+      path: "./fonts/YekanBakh-Black.ttf",
+      weight: "900",
+      style: 'normal',
+    },
+    {
+      path: "./fonts/YekanBakh-ExtraBlack.ttf",
+      weight: "1000",
+      style: 'normal',
+    },
+  ],
+  variable: "--font-yekan",
+})
+
+
+
 
 
 export const metadata = {
@@ -18,7 +42,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="fa" dir="rtl">
       <body
-        className={`${vazirmatn.variable} antialiased`}
+        className={`${myCustomFont.className} antialiased`}
       >
         <Navbar />
         {children}

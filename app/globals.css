@@ -1,36 +1,46 @@
 @import "tailwindcss";
 
-/* ---------- Variables ---------- */
 :root {
-  --background: #ffffff;
-  --foreground: #000000;
-  --accent: #2563eb;
-  --accent-hover: #1d4ed8;
+  --background: #f4f5f7;
+  --foreground: #2a2d53;
+  --accent: #4A6DFC;
   --accent-soft: #dbeafe;
 
   --border: #e5e7eb;
   --muted: #6b7280;
 }
 
-/* ---------- Body ---------- */
 body {
   background-color: var(--background);
   color: var(--foreground);
   font-family: var(--vazirmatn-font), sans-serif;
   direction: rtl;
-  /* راست‌چین */
 }
 
 
-/* styles/accent.css */
-.bg-accent {
-  background-color: var(--accent);
-}
 
-.bg-accent-hover:hover {
-  background-color: var(--accent-hover);
-}
+@layer utilities {
+  .bg-background {
+    background-color: var(--background);
+  }
 
-.text-accent {
-  color: var(--accent);
+  .text-foreground {
+    color: var(--foreground);
+  }
+
+  .bg-accent {
+    background-color: var(--accent);
+  }
+
+  .text-accent {
+    color: var(--accent);
+  }
+
+  .text-white {
+    color: var(--background);
+  }
+
+  .text-blue {
+    color: var(--foreground);
+  }
 }
